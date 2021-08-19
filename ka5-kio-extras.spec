@@ -1,15 +1,15 @@
-%define		kdeappsver	21.04.3
+%define		kdeappsver	21.08.0
 %define		kframever	5.83.0
 %define		qtver		5.15.2
 %define		kaname		kio-extras
 Summary:	kio-extras
 Name:		ka5-%{kaname}
-Version:	21.04.3
+Version:	21.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	e1292a8283accdf94001852418643a65
+# Source0-md5:	6e314c168bba52384c0946df810efcb8
 URL:		http://www.kde.org/
 BuildRequires:	OpenEXR-devel >= 3.0.5
 BuildRequires:	Qt5Core-devel >= %{qtver}
@@ -71,8 +71,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %ghost %{_libdir}/libkioarchive.so.5
 %attr(755,root,root) %{_libdir}/libkioarchive.so.5.*.*
-%ghost %{_libdir}/libmolletnetwork5.so.21
-%attr(755,root,root) %{_libdir}/libmolletnetwork5.so.21.*.*
 %attr(755,root,root) %{_libdir}/qt5/plugins/audiothumbnail.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/comicbookthumbnail.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/cursorthumbnail.so
@@ -82,7 +80,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt5/plugins/imagethumbnail.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/jpegthumbnail.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kded/filenamesearchmodule.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kded/networkwatcher.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kded/recentdocumentsnotifier.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kded/smbwatcher.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kfileitemaction/kactivitymanagerd_fileitem_linking_plugin.so
@@ -95,7 +92,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/fish.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/info.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/man.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/network.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/nfs.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/recentdocuments.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/recentlyused.so
@@ -112,50 +108,29 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt5/plugins/windowsimagethumbnail.so
 %attr(755,root,root) %{_prefix}/libexec/kf5/smbnotifier
 %{_datadir}/config.kcfg/jpegcreatorsettings5.kcfg
-%{_datadir}/dbus-1/interfaces/kf5_org.kde.network.kioslavenotifier.xml
 %{_datadir}/kio_bookmarks/kio_bookmarks.css
 %{_datadir}/kio_docfilter/kio_docfilter.css
 %{_datadir}/kio_info/kde-info2html
 %{_datadir}/kio_info/kde-info2html.conf
-%{_datadir}/konqsidebartng/virtual_folders/remote/virtualfolder_network.desktop
 %{_datadir}/konqueror/dirtree/remote/smb-network.desktop
-%{_datadir}/kservices5/about.protocol
-%{_datadir}/kservices5/activities.protocol
+%{_datadir}/kservicetypes5/thumbcreator.desktop
+%{_datadir}/qlogging-categories5/kio-extras.categories
 %{_datadir}/kservices5/audiothumbnail.desktop
-%{_datadir}/kservices5/bookmarks.protocol
-%{_datadir}/kservices5/bzip.protocol
-%{_datadir}/kservices5/bzip2.protocol
 %{_datadir}/kservices5/comicbookthumbnail.desktop
 %{_datadir}/kservices5/cursorthumbnail.desktop
 %{_datadir}/kservices5/directorythumbnail.desktop
 %{_datadir}/kservices5/djvuthumbnail.desktop
 %{_datadir}/kservices5/ebookthumbnail.desktop
 %{_datadir}/kservices5/exrthumbnail.desktop
-%{_datadir}/kservices5/filenamesearch.protocol
-%{_datadir}/kservices5/fish.protocol
-%{_datadir}/kservices5/gzip.protocol
 %{_datadir}/kservices5/imagethumbnail.desktop
-%{_datadir}/kservices5/info.protocol
 %{_datadir}/kservices5/jpegthumbnail.desktop
 %{_datadir}/kservices5/kraorathumbnail.desktop
-%{_datadir}/kservices5/lzma.protocol
-%{_datadir}/kservices5/man.protocol
-%{_datadir}/kservices5/network.protocol
-%{_datadir}/kservices5/nfs.protocol
 %{_datadir}/kservices5/opendocumentthumbnail.desktop
-%{_datadir}/kservices5/recentdocuments.protocol
-%{_datadir}/kservices5/settings.protocol
-%{_datadir}/kservices5/sftp.protocol
 %{_datadir}/kservices5/svgthumbnail.desktop
 %{_datadir}/kservices5/textthumbnail.desktop
-%{_datadir}/kservices5/thumbnail.protocol
 %{_datadir}/kservices5/windowsexethumbnail.desktop
 %{_datadir}/kservices5/windowsimagethumbnail.desktop
-%{_datadir}/kservices5/xz.protocol
-%{_datadir}/kservicetypes5/thumbcreator.desktop
-%{_datadir}/mime/packages/kf5_network.xml
-%{_datadir}/qlogging-categories5/kio-extras.categories
-%{_datadir}/remoteview/network.desktop
+%{_datadir}/qlogging-categories5/kio-extras.renamecategories
 %{_datadir}/remoteview/smb-network.desktop
 
 %files devel
