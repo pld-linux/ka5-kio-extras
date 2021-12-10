@@ -1,15 +1,15 @@
-%define		kdeappsver	21.08.3
+%define		kdeappsver	21.12.0
 %define		kframever	5.83.0
 %define		qtver		5.15.2
 %define		kaname		kio-extras
 Summary:	kio-extras
 Name:		ka5-%{kaname}
-Version:	21.08.3
+Version:	21.12.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	d2a3693527584dd241fdbf4984db2a37
+# Source0-md5:	d189ef3dc9747731cf497299c74ee085
 URL:		http://www.kde.org/
 BuildRequires:	OpenEXR-devel >= 3.0.5
 BuildRequires:	Qt5Core-devel >= %{qtver}
@@ -87,7 +87,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/activities.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/archive.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/bookmarks.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/filenamesearch.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/filter.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/fish.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/info.so
@@ -95,10 +94,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/nfs.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/recentdocuments.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/recentlyused.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/settings.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/sftp.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/smb.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/thumbnail.so
+%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/kio_filenamesearch.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kfileaudiopreview.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kritathumbnail.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/opendocumentthumbnail.so
