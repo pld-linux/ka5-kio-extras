@@ -19,6 +19,7 @@ BuildRequires:	cmake >= 2.8.12
 BuildRequires:	gettext-devel
 BuildRequires:	kdsoap-devel >= 1.9.0
 BuildRequires:	kf5-extra-cmake-modules >= %{kframever}
+BuildRequires:	libtirpc-devel > 1.3.2
 BuildRequires:	ninja
 BuildRequires:	qt5-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
