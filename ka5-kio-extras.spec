@@ -5,7 +5,7 @@
 Summary:	kio-extras
 Name:		ka5-%{kaname}
 Version:	21.12.2
-Release:	3
+Release:	4
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
@@ -117,6 +117,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/kio_info
 %{_datadir}/kio_info/kde-info2html
 %{_datadir}/kio_info/kde-info2html.conf
+%dir %{_datadir}/konqueror
 %dir %{_datadir}/konqueror/dirtree
 %dir %{_datadir}/konqueror/dirtree/remote
 %{_datadir}/konqueror/dirtree/remote/mtp-network.desktop
