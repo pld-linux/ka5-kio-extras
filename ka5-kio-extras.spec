@@ -5,7 +5,7 @@
 Summary:	kio-extras
 Name:		ka5-%{kaname}
 Version:	21.12.2
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
@@ -92,6 +92,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/fish.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/info.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/man.so
+%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/mtp.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/nfs.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/recentdocuments.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/recentlyused.so
@@ -99,6 +100,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/smb.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/thumbnail.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/kio_filenamesearch.so
+%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kiod/kmtpd.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kfileaudiopreview.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kritathumbnail.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/opendocumentthumbnail.so
@@ -112,6 +114,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kio_docfilter/kio_docfilter.css
 %{_datadir}/kio_info/kde-info2html
 %{_datadir}/kio_info/kde-info2html.conf
+%{_datadir}/konqueror/dirtree/remote/mtp-network.desktop
 %{_datadir}/konqueror/dirtree/remote/smb-network.desktop
 %{_datadir}/kservicetypes5/thumbcreator.desktop
 %{_datadir}/qlogging-categories5/kio-extras.categories
@@ -131,7 +134,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kservices5/windowsexethumbnail.desktop
 %{_datadir}/kservices5/windowsimagethumbnail.desktop
 %{_datadir}/qlogging-categories5/kio-extras.renamecategories
+%{_datadir}/remoteview/mtp-network.desktop
 %{_datadir}/remoteview/smb-network.desktop
+%{_datadir}/dbus-1/services/org.kde.kmtpd5.service
+%{_datadir}/solid/actions/solid_mtp.desktop
 
 %files devel
 %defattr(644,root,root,755)
