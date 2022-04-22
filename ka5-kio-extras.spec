@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	21.12.3
+%define		kdeappsver	22.04.0
 %define		kframever	5.83.0
 %define		qtver		5.15.2
 %define		kaname		kio-extras
 Summary:	kio-extras
 Name:		ka5-%{kaname}
-Version:	21.12.3
+Version:	22.04.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	8e9ab2ce720240dfaaa32adb5950e81b
+# Source0-md5:	96de04fc3201195c1d517a14b2301157
 URL:		http://www.kde.org/
 BuildRequires:	OpenEXR-devel >= 3.0.5
 BuildRequires:	Qt5Core-devel >= %{qtver}
@@ -81,14 +81,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %ghost %{_libdir}/libkioarchive.so.5
 %attr(755,root,root) %{_libdir}/libkioarchive.so.5.*.*
-%attr(755,root,root) %{_libdir}/qt5/plugins/audiothumbnail.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/comicbookthumbnail.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/cursorthumbnail.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/djvuthumbnail.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/ebookthumbnail.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/exrthumbnail.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/imagethumbnail.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/jpegthumbnail.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kded/filenamesearchmodule.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kded/recentdocumentsnotifier.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kded/smbwatcher.so
@@ -111,12 +103,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/kio_filenamesearch.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kiod/kmtpd.so
 %attr(755,root,root) %{_libdir}/qt5/plugins/kfileaudiopreview.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/kritathumbnail.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/opendocumentthumbnail.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/svgthumbnail.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/textthumbnail.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/windowsexethumbnail.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/windowsimagethumbnail.so
 %attr(755,root,root) %{_prefix}/libexec/kf5/smbnotifier
 %{_datadir}/config.kcfg/jpegcreatorsettings5.kcfg
 %dir %{_datadir}/kio_bookmarks
@@ -133,26 +119,28 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/konqueror/dirtree/remote/smb-network.desktop
 %{_datadir}/kservicetypes5/thumbcreator.desktop
 %{_datadir}/qlogging-categories5/kio-extras.categories
-%{_datadir}/kservices5/audiothumbnail.desktop
-%{_datadir}/kservices5/comicbookthumbnail.desktop
-%{_datadir}/kservices5/cursorthumbnail.desktop
-%{_datadir}/kservices5/directorythumbnail.desktop
-%{_datadir}/kservices5/djvuthumbnail.desktop
-%{_datadir}/kservices5/ebookthumbnail.desktop
-%{_datadir}/kservices5/exrthumbnail.desktop
-%{_datadir}/kservices5/imagethumbnail.desktop
-%{_datadir}/kservices5/jpegthumbnail.desktop
-%{_datadir}/kservices5/kraorathumbnail.desktop
-%{_datadir}/kservices5/opendocumentthumbnail.desktop
-%{_datadir}/kservices5/svgthumbnail.desktop
-%{_datadir}/kservices5/textthumbnail.desktop
-%{_datadir}/kservices5/windowsexethumbnail.desktop
-%{_datadir}/kservices5/windowsimagethumbnail.desktop
 %{_datadir}/qlogging-categories5/kio-extras.renamecategories
 %{_datadir}/remoteview/mtp-network.desktop
 %{_datadir}/remoteview/smb-network.desktop
 %{_datadir}/dbus-1/services/org.kde.kmtpd5.service
 %{_datadir}/solid/actions/solid_mtp.desktop
+%dir %{_libdir}/qt5/plugins/kf5/thumbcreator
+%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/thumbcreator/audiothumbnail.so
+%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/thumbcreator/comicbookthumbnail.so
+%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/thumbcreator/cursorthumbnail.so
+%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/thumbcreator/djvuthumbnail.so
+%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/thumbcreator/ebookthumbnail.so
+%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/thumbcreator/exrthumbnail.so
+%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/thumbcreator/imagethumbnail.so
+%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/thumbcreator/jpegthumbnail.so
+%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/thumbcreator/kritathumbnail.so
+%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/thumbcreator/opendocumentthumbnail.so
+%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/thumbcreator/svgthumbnail.so
+%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/thumbcreator/textthumbnail.so
+%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/thumbcreator/windowsexethumbnail.so
+%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/thumbcreator/windowsimagethumbnail.so
+%{_datadir}/kservices5/directorythumbnail.desktop
+%{_datadir}/mime/packages/org.kde.kio.smb.xml
 
 %files devel
 %defattr(644,root,root,755)
