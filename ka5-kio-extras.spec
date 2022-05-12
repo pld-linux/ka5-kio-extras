@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	22.04.0
+%define		kdeappsver	22.04.1
 %define		kframever	5.83.0
 %define		qtver		5.15.2
 %define		kaname		kio-extras
 Summary:	kio-extras
 Name:		ka5-%{kaname}
-Version:	22.04.0
+Version:	22.04.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	96de04fc3201195c1d517a14b2301157
+# Source0-md5:	194664eb0b9c07c136278b592cf8179c
 URL:		http://www.kde.org/
 BuildRequires:	OpenEXR-devel >= 3.0.5
 BuildRequires:	Qt5Core-devel >= %{qtver}
