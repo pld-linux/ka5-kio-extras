@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	22.04.3
+%define		kdeappsver	22.08.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kio-extras
 Summary:	kio-extras
 Name:		ka5-%{kaname}
-Version:	22.04.3
+Version:	22.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	2221e718e389de942b01b1735acbe686
+# Source0-md5:	06698929912922eedee84e3c72b1be8f
 URL:		http://www.kde.org/
 BuildRequires:	OpenEXR-devel >= 3.0.5
 BuildRequires:	Qt5Core-devel >= %{qtver}
@@ -141,6 +141,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt5/plugins/kf5/thumbcreator/windowsimagethumbnail.so
 %{_datadir}/kservices5/directorythumbnail.desktop
 %{_datadir}/mime/packages/org.kde.kio.smb.xml
+%dir %{_libdir}/qt5/plugins/kf5/kfileitemaction
+%{_libdir}/qt5/plugins/kf5/kfileitemaction/forgetfileitemaction.so
 
 %files devel
 %defattr(644,root,root,755)
