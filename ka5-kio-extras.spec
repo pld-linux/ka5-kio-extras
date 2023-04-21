@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	22.12.3
+%define		kdeappsver	23.04.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kio-extras
 Summary:	kio-extras
 Name:		ka5-%{kaname}
-Version:	22.12.3
-Release:	2
+Version:	23.04.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	db4f869ea037adec53e87e890933c1fc
+# Source0-md5:	0c266e23f212550506e4a06d0d0ac44d
 URL:		http://www.kde.org/
 BuildRequires:	OpenEXR-devel >= 3.0.5
 BuildRequires:	Qt5Core-devel >= %{qtver}
@@ -146,7 +146,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kservices5/directorythumbnail.desktop
 %{_datadir}/mime/packages/org.kde.kio.smb.xml
 %dir %{_libdir}/qt5/plugins/kf5/kfileitemaction
-%{_libdir}/qt5/plugins/kf5/kfileitemaction/forgetfileitemaction.so
+%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kfileitemaction/forgetfileitemaction.so
+%attr(755,root,root) %{_libdir}/qt5/plugins/kf5/kio/afc.so
+%{_datadir}/remoteview/afc-network.desktop
+%{_datadir}/solid/actions/solid_afc.desktop
+
 
 %files devel
 %defattr(644,root,root,755)
