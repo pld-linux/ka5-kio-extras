@@ -8,7 +8,7 @@
 Summary:	kio-extras
 Name:		ka5-%{kaname}
 Version:	23.04.2
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
@@ -22,6 +22,7 @@ BuildRequires:	cmake >= 2.8.12
 BuildRequires:	gettext-devel
 BuildRequires:	kdsoap-devel >= 1.9.0
 BuildRequires:	kf5-extra-cmake-modules >= %{kframever}
+BuildRequires:	kf5-kactivities-stats-devel >= %{kframever}
 BuildRequires:	libsmbclient-devel
 BuildRequires:	libtirpc-devel > 1.3.2
 BuildRequires:	ninja
