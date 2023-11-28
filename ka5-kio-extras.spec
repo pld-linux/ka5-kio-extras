@@ -28,6 +28,7 @@ BuildRequires:	kf5-karchive-devel >= %{kframever}
 BuildRequires:	kf5-kdbusaddons-devel >= %{kframever}
 BuildRequires:	kf5-kdnssd-devel >= %{kframever}
 BuildRequires:	kf5-kguiaddons-devel >= %{kframever}
+BuildRequires:	kf5-solid-devel >= %{kframever}
 BuildRequires:	kf5-syntax-highlighting-devel >= %{kframever}
 BuildRequires:	libsmbclient-devel
 BuildRequires:	libtirpc-devel > 1.3.2
